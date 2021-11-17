@@ -21,16 +21,19 @@ const AuthBox = () => {
         <h2 className="form__title">
           {pathname === "/signup" ? "SignUp" : "LogIn"}
         </h2>
-        {pathname === "/signup"
-          ? inputsData.map((input) => <Input key={input.id} {...input} />)
-          : inputsData
-              .slice(1, 3)
-              .map((input) => <Input key={input.id} {...input} />)}
+        <div className="form__inputs">
+          {pathname === "/signup"
+            ? inputsData.map((input) => <Input key={input.id} {...input} />)
+            : inputsData
+                .slice(1, 3)
+                .map((input) => <Input key={input.id} {...input} />)}{" "}
+        </div>
         <div className="form__btn">
           <button type="submit">
             {pathname === "/signup" ? "SignUp" : "LogIn"}
           </button>
-          <hr />
+        </div>
+        <div className="form__link">
           <p>
             {pathname === "/signup"
               ? "Already have an account?"
