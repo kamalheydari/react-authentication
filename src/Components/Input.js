@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
-// import { useLocation } from "react-router";
+import React from "react";
 import { useAuthContext } from "../context/AuthContext";
 
 const Input = ({ label, type, name }) => {
-  // const { pathname } = useLocation();
   const {
     changeHandler,
     signUpData,
@@ -20,7 +18,7 @@ const Input = ({ label, type, name }) => {
       <input
         type={type}
         name={name}
-        defaultValue={path === "/signup" ? signUpData[name] : logInData[name]}
+        value={path === "/signup" ? signUpData[name] : logInData[name]}
         onChange={changeHandler}
         onFocus={focusHandler}
       />

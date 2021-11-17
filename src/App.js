@@ -2,8 +2,11 @@ import React from "react";
 import { Route, Switch, Redirect, useLocation } from "react-router-dom";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import "./App.css";
+//? Components
 import AuthBox from "./Components/AuthBox";
+
+//? Styles
+import "./App.css";
 
 const App = () => {
   const location = useLocation();

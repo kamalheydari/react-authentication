@@ -1,13 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { validate } from "../Components/validate";
+import { validate } from "../helpers/validate";
+import { toast } from "react-toastify";
 
-import { notify } from "../Components/toast";
 const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   //? Global States
   const [path, setPath] = useState("");
-  console.log(path);
   const [signUpData, setSignUpData] = useState({
     name: "",
     email: "",
@@ -23,12 +22,9 @@ const AuthProvider = ({ children }) => {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
 
-  console.log(path);
   useEffect(() => {
     setErrors({});
     setTouched({});
-    // setLogInData(logInData);
-    // setSignUpData(signUpData);
   }, [path]);
 
   useEffect(() => {
@@ -68,11 +64,11 @@ const AuthProvider = ({ children }) => {
   const submitHandler = (event) => {
     event.preventDefault();
     if (!Object.keys(errors).length) {
-      // console.log(data);
-      // console.log(Object.keys(errors));
-      notify("You signed up successfuly", "success");
+      path === "/signup"
+        ? toast.success("You signed up successfuly")
+        : toast.success("You loged in successfuly");
     } else {
-      notify("Invalid data", "error");
+      toast.error("Invalid Data!");
       setTouched({
         name: true,
         email: true,

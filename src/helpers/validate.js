@@ -1,13 +1,12 @@
 export const validate = (data, type) => {
   const errors = {};
-  console.log(type);
   if (type === "/signup") {
     //? USERNAME ERRORS
-    // if (!data.name.trim()) {
-    //   errors.name = "Username required";
-    // } else {
-    //   delete errors.name;
-    // }
+    if (!data.name) {
+      errors.name = "Username required";
+    } else {
+      delete errors.name;
+    }
 
     //? CONFIRM PASSWORD ERRORS
     if (!data.confirmPassword) {
