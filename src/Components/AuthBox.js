@@ -13,7 +13,7 @@ const AuthBox = () => {
 
   useEffect(() => {
     setPath(pathname);
-  }, [pathname]);
+  }, []);
 
   return (
     <div className="container">

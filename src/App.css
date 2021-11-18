@@ -2,10 +2,12 @@
 :root {
   --bg-color: #191919;
   --blue-1: #3498db;
-  /* --blue-2: #1b2a4a; */
+  --blue-2: #1b2a4a;
   --green-1: #2ecc71;
   --green-2: #2ecc7070;
   --white-1: #ededed;
+  --red-1: #e21616;
+  --red-2: #d12020;
 }
 
 /* reset  */
@@ -19,29 +21,59 @@
 }
 a {
   text-decoration: none;
+  color: var(--green-1);
 }
 img {
   width: 100%;
   height: 100%;
 }
+body {
+  font-size: 0.825rem;
+}
+
+/* typographi */
+h2 {
+  font-size: 2rem;
+}
+button {
+  font-size: 1.2rem;
+}
+a {
+  font-size: 1.4rem;
+}
+input {
+  font-size: 1.2rem;
+}
+span {
+  font-size: 0.9rem;
+}
+label {
+  font-size: 1.1rem;
+}
+p {
+  font-size: 1.4rem;
+}
+/* styles */
 
 body {
   height: 100vh;
   background: var(--bg-color);
   color: var(--white-1);
-  font-size: 0.825rem;
   display: grid;
   place-items: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 .container {
-  border: 1px solid silver;
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.08);
+  border-radius: 0.8rem;
 }
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 2rem 1rem;
   width: min(80vw, 500px);
 }
@@ -61,8 +93,7 @@ body {
   display: inline-block;
   padding: 0.3rem;
   height: 1rem;
-  font-size: 0.9rem;
-  color: rgb(224, 54, 54);
+  color: var(--red-2);
 }
 .form__control:nth-child(5) {
   display: grid;
@@ -72,16 +103,13 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 .form__control:nth-child(5) label {
-  font-size: 1.1rem;
   grid-column: 1/4;
   width: 100%;
 }
 .form__control:nth-child(5) input {
   grid-column: 4/5;
-
   width: max-content;
   border: 0.15rem solid var(--blue-1);
-
   appearance: none;
   border-radius: 50%;
 }
@@ -101,7 +129,6 @@ body {
   text-align: center;
   color: var(--white-1);
   padding: 0.5rem;
-  font-size: 1.2rem;
   border-radius: 2.5rem;
   width: 80%;
   transition: 0.25s;
@@ -117,10 +144,23 @@ body {
   color: var(--white-1);
   border-radius: 2.5rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+.form__btn button:hover {
+  background-color: var(--green-1);
+  color: var(--bg-color);
+}
+.form__link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.form__link a {
+  margin-left: 0.4rem;
 }
 
-.form__link {
-  border: 1px solid white;
+.form__control .uncompleted {
+  border-color: var(--red-1);
 }
 
 /* CSS Styles */
@@ -137,4 +177,19 @@ body {
 .fade-exit {
   opacity: 0;
   position: absolute;
+}
+
+.item-enter {
+  opacity: 0;
+}
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+}
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }
