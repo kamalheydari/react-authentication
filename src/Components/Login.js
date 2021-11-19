@@ -1,19 +1,25 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
 import { inputsData } from "../assets/data/inputsData";
 import { useAuthContext } from "../context/AuthContext";
+
+//? Components
 import Input from "./Input";
 
+//? Toast
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  //? Context
   const { submitHandler, logInData, setPath } = useAuthContext();
+
   const { pathname } = useLocation();
 
   useEffect(() => {
     setPath(pathname);
   }, []);
+
   return (
     <div className="container">
       <form className="form" onSubmit={submitHandler}>

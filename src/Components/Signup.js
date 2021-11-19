@@ -1,12 +1,19 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import { inputsData } from "../assets/data/inputsData";
 import { useAuthContext } from "../context/AuthContext";
-import "react-toastify/dist/ReactToastify.css";
+
+//? Data
+import { inputsData } from "../assets/data/inputsData";
+
+//? Components
 import Input from "./Input";
 
+//? Toast
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Signup = () => {
+  //? Context
   const { submitHandler, signUpData, setPath } = useAuthContext();
 
   const { pathname } = useLocation();

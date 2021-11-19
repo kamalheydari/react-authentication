@@ -14,7 +14,6 @@ const AuthProvider = ({ children }) => {
     confirmPassword: "",
     isAccepted: "",
   });
-
   const [logInData, setLogInData] = useState({
     email: "",
     password: "",
@@ -22,11 +21,13 @@ const AuthProvider = ({ children }) => {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
 
+  //? Reset Errors
   useEffect(() => {
     setErrors({});
     setTouched({});
   }, [path]);
 
+  //? Validate Data
   useEffect(() => {
     setErrors(validate(logInData, path));
   }, [logInData, path]);
