@@ -81,7 +81,7 @@ body {
   overflow: hidden;
 }
 .container {
-  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 1rem 1rem rgba(0, 0, 0, 0.15);
   border-radius: 0.8rem;
 }
 .form {
@@ -90,7 +90,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   width: min(80vw, 500px);
 }
 .form__inputs {
@@ -125,15 +125,15 @@ body {
 .form__control:nth-child(5) input {
   grid-column: 4/5;
   width: max-content;
-  border: 0.15rem solid var(--blue-1);
+  border: 0.15rem solid var(--green-1);
   appearance: none;
   border-radius: 50%;
 }
 .form__control:nth-child(5) input:focus {
-  border-color: var(--green-1);
+  border-color: var(--blue-1);
 }
 .form__control:nth-child(5) input:checked {
-  background-color: var(--blue-1);
+  background-color: var(--green-1);
   border-radius: 50%;
 }
 .form__control:nth-child(5) span {
@@ -141,7 +141,7 @@ body {
 }
 
 .form__control input {
-  border: 0.15rem solid var(--blue-1);
+  border: 0.15rem solid var(--green-1);
   text-align: center;
   color: var(--white-1);
   padding: 0.5rem;
@@ -150,7 +150,7 @@ body {
   transition: 0.25s;
 }
 .form__control input:focus:not(input[type="checkbox"]) {
-  border-color: var(--green-1);
+  border-color: var(--blue-1);
   width: 100%;
 }
 
