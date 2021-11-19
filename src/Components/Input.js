@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuthContext } from "../context/AuthContext";
 
-const Input = ({ label, type, name, placeholder, id }) => {
+const Input = ({ label, type, name, placeholder, id, data }) => {
   const {
     changeHandler,
     signUpData,
@@ -12,6 +12,7 @@ const Input = ({ label, type, name, placeholder, id }) => {
     logInData,
   } = useAuthContext();
 
+  // console.log(data);
   return (
     <>
       <div className="form__control">
@@ -21,10 +22,10 @@ const Input = ({ label, type, name, placeholder, id }) => {
           name={name}
           placeholder={placeholder}
           id={name}
-          value={path === "/signup" ? signUpData[name] : logInData[name]}
-          className={errors[name] && touched[name] && "uncompleted"}
+          value={data[name]}
           onChange={changeHandler}
           onFocus={focusHandler}
+          className={errors[name] && touched[name] && "uncompleted"}
         />
         <span>{errors[name] && touched[name] && errors[name]}</span>
       </div>
