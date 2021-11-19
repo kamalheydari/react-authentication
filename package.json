@@ -1,6 +1,6 @@
 {
-  "homepage": "https://kamalheydari.github.io/react-Authentication/",
-  "name": "react-Authentication",
+  "homepage": "https://kamalheydari.github.io/react-authentication/",
+  "name": "react-authentication",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
