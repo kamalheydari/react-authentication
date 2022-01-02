@@ -3,7 +3,7 @@
 ## Demo
 
 See demo on github pages
-[React-Authentication](https://kamalheydari.github.io/react-Authentication/)
+[React-Authentication](https://kamalheydari.github.io/react-authentication/)
 
 ![domo](demo.png)
 
