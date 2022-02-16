@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <form className="form" onSubmit={submitHandler}>
+      <form className="form"  onSubmit={submitHandler}>
         <h2 className="form__title">LogIn</h2>
         <div className="form__inputs">
           {inputsData.slice(1, 3).map((input) => (
