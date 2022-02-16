@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-authentication/static/css/main.3582a440.chunk.css",
-    "main.js": "/react-authentication/static/js/main.e74a65d5.chunk.js",
-    "main.js.map": "/react-authentication/static/js/main.e74a65d5.chunk.js.map",
+    "main.css": "/react-authentication/static/css/main.0a8da6fd.chunk.css",
+    "main.js": "/react-authentication/static/js/main.3958482b.chunk.js",
+    "main.js.map": "/react-authentication/static/js/main.3958482b.chunk.js.map",
     "runtime-main.js": "/react-authentication/static/js/runtime-main.a9d0d596.js",
     "runtime-main.js.map": "/react-authentication/static/js/runtime-main.a9d0d596.js.map",
     "static/css/2.58a45539.chunk.css": "/react-authentication/static/css/2.58a45539.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.a06714ef.chunk.js.map": "/react-authentication/static/js/2.a06714ef.chunk.js.map",
     "index.html": "/react-authentication/index.html",
     "static/css/2.58a45539.chunk.css.map": "/react-authentication/static/css/2.58a45539.chunk.css.map",
-    "static/css/main.3582a440.chunk.css.map": "/react-authentication/static/css/main.3582a440.chunk.css.map",
+    "static/css/main.0a8da6fd.chunk.css.map": "/react-authentication/static/css/main.0a8da6fd.chunk.css.map",
     "static/js/2.a06714ef.chunk.js.LICENSE.txt": "/react-authentication/static/js/2.a06714ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a9d0d596.js",
     "static/css/2.58a45539.chunk.css",
     "static/js/2.a06714ef.chunk.js",
-    "static/css/main.3582a440.chunk.css",
-    "static/js/main.e74a65d5.chunk.js"
+    "static/css/main.0a8da6fd.chunk.css",
+    "static/js/main.3958482b.chunk.js"
   ]
 }
